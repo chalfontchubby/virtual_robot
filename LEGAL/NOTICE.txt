@@ -14,7 +14,11 @@ Virtual Robot, Copyright 2019 Team Beta
 
    This product includes:
 
-   Jamepad software (Copyright 2016, William Hartman), to support gamepad use.
+   Jamepad software, v2.30.0.0 (Copyright 2016, William Hartman; maintained by libGDX), to support gamepad use, Licensed under zlib License
+
+   gdx-jnigen-loader, v2.2.0 (libGDX, used by Jamepad to load its native libraries), Licensed under Apache License, Version 2.0
+
+   SDL_GameControllerDB (gamecontrollerdb.txt, Copyright 1997-2025 Sam Lantinga), gamepad mappings, Licensed under zlib License
 
    Guava: Google Core Libraries for Java (Copyright 2017, Google, Inc.), Licensed under Apache License, Version 2.0
 
