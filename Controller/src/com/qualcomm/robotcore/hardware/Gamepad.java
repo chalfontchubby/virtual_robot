@@ -156,10 +156,12 @@ public class Gamepad {
         y = state.y;
         a = state.a;
         b = state.b;
+        // Jamepad 2.x reports Y as SDL does (pushed forward = negative), which already matches FTC.
+        // Jamepad 1.x inverted it, so this used to negate it back.
         left_stick_x = setWithDeadzone(state.leftStickX);
-        left_stick_y = setWithDeadzone(-state.leftStickY);
+        left_stick_y = setWithDeadzone(state.leftStickY);
         right_stick_x = setWithDeadzone(state.rightStickX);
-        right_stick_y = setWithDeadzone(-state.rightStickY);
+        right_stick_y = setWithDeadzone(state.rightStickY);
         dpad_up = state.dpadUp;
         dpad_down = state.dpadDown;
         dpad_left = state.dpadLeft;
