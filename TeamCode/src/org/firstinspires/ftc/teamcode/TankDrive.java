@@ -10,8 +10,12 @@ import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 /**
  * TeleOp for a tank-style (differential drive) robot: the wheels on each side are driven
  * together, and the robot turns by running the two sides at different speeds. This suits robots
- * with normal wheels, omni wheels, or a mix (for example traction wheels in the middle and omnis
- * at the corners, so the robot turns easily). Unlike mecanum, it can't strafe sideways.
+ * with normal wheels, omni wheels, or a mix. Unlike mecanum, it can't strafe sideways.
+ *
+ * A common layout, used on kit demo robots, is normal (traction) wheels at one end and omni
+ * wheels at the other. Only the normal wheels grip sideways, so the robot pivots around that end
+ * and the omni end swings out on turns. For accurate turns in autonomous, use the IMU heading
+ * rather than counting encoder ticks, because the omni wheels slide sideways as the robot turns.
  *
  * Two ways to drive, switched with the X button:
  *   TANK     left stick Y drives the left side, right stick Y drives the right side
